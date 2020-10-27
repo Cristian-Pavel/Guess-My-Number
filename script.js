@@ -1,17 +1,5 @@
 'use strict';
 
-// TODO:
-/* 
-    - DONE - selectarea in variabile sau obiect
-    - DONE - schimbare text - romana
-    - DONE - schimbare imagini basic - joc + castig
-    - DONE - schimbare font
-    - DONE - adaugare event listener ENTER la "Asta-i!"
-    - DONE adaugare casuta de pop-up la castig (care va iesi prin esc)
-    - mesaje diferite pentru 30 de level-uri
-
-*/
-
 let secretNumber = Math.trunc(Math.random() * 20 + 1);
 let score = 20;
 let highscore = 0;
@@ -24,8 +12,8 @@ let selectii = {
     highscore: document.querySelector('.highscore'),
     guess: document.querySelector('.guess'),
     score: document.querySelector('.score'),
+    titluScor: document.querySelector('.label-score'),
     again: document.querySelector('.again'),
-    fereastra: document.querySelector('.modal'),
 };
 
 let functii = {
@@ -45,9 +33,9 @@ let functii = {
             selectii.number.textContent = secretNumber;
 
             if (highscore < score) {
-                highscore = score;
+                highscore = 20 - score;
                 selectii.highscore.textContent = highscore;
-                functii.mesajScor(highscore);
+                selectii.titluScor.style = 'display: none';
             }
         }
 
@@ -84,25 +72,9 @@ let functii = {
         selectii.body.style.backgroundImage = "url('img/ghicitoare2.jpg')";
         selectii.number.style.width = '15rem';
     },
-
-    mesajScor: function (record) {
-        switch (record) {
-            case 20: {
-                this.popUp('barosn');
-                break;
-            }
-        }
-    },
-
-    popUp: function () {
-        const inchidePopup = function () {
-            selectii.fereastra.classList.add('hidden');
-        };
-        selectii.fereastra.classList.remove('hidden');
-        selectii.fereastra.addEventListener('click', inchidePopup);
-    },
 };
 
+// Doar pentru a verifica in dezvoltarea aplicatiei
 // selectii.number.textContent = secretNumber;
 
 document.addEventListener('keydown', function (e) {

@@ -9,7 +9,7 @@
 }
 
 html {
-    font-size: 80%;
+    font-size: 90%;
     box-sizing: border-box;
 }
 
@@ -65,7 +65,7 @@ h1 {
     background: #eee;
     color: #333;
     font-size: 6rem;
-    width: 15rem;
+    width: 12rem;
     padding: 3rem 0rem;
     text-align: center;
     position: absolute;
@@ -123,50 +123,11 @@ h1 {
     margin-bottom: 2rem;
 }
 
-/* Fereastra de pop-up */
-.close-modal {
-    position: absolute;
-    top: 1.2rem;
-    right: 2rem;
-    font-size: 5rem;
-    color: #333;
-    cursor: pointer;
-    border: none;
-    background: none;
+#explic-record {
+    font-size: 80%;
+    padding-top: 3px;
 }
 
 .hidden {
     display: none;
-}
-
-.modal {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 70%;
-    background-color: rgb(59, 56, 56);
-    padding: 6rem;
-    box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
-    z-index: 10;
-}
-
-.modal h1,
-p {
-    position: relative;
-}
-
-.modal p {
-    font-size: 160%;
-}
-
-.overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.6);
-    backdrop-filter: blur(3px);
-    z-index: 5;
 }
