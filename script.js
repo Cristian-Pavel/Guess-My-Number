@@ -68,6 +68,7 @@ let functii = {
         selectii.message.textContent = 'Incearca sa ghicesti...';
         selectii.number.textContent = '?';
         selectii.score.textContent = score;
+        selectii.titluScor.style = 'display: block';
         selectii.guess.value = '';
         selectii.body.style.backgroundImage = "url('img/ghicitoare2.jpg')";
         selectii.number.style.width = '15rem';
