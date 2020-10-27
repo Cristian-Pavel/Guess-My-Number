@@ -45,8 +45,8 @@ let functii = {
             if (score > 1) {
                 functii.messageText(
                     guess > secretNumber
-                        ? `🤪 Prea mult, sefu !`
-                        : `🤏Prea putin, nu fi zgarcit sefu !`
+                        ? `🤪 Prea mult, sefu' !`
+                        : `🤏Prea putin, nu fi zgarcit sefu' !`
                 );
                 score--;
                 selectii.score.textContent = score;
