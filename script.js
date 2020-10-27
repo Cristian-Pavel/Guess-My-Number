@@ -32,11 +32,11 @@ let functii = {
             selectii.body.style.backgroundSize = 'cover';
             selectii.number.textContent = secretNumber;
 
-            if (highscore < score) {
-                highscore = 20 - score;
-                selectii.highscore.textContent = highscore;
-                selectii.titluScor.style = 'display: none';
-            }
+            // if (highscore < score) {
+            highscore = 21 - score;
+            selectii.highscore.textContent = highscore;
+            selectii.titluScor.style = 'display: none';
+            // }
         }
 
         // Cand nu ghiceste
@@ -78,7 +78,7 @@ let functii = {
 // selectii.number.textContent = secretNumber;
 
 document.addEventListener('keydown', function (e) {
-    if (e.key === 'Enter' || e.key === 'click') functii.joaca();
+    if (e.key === 'Enter') functii.joaca();
 });
 
 selectii.check.addEventListener('click', functii.joaca);
