@@ -27,7 +27,7 @@ let functii = {
 
             // Cand a ghicit corect
         } else if (guess === secretNumber) {
-            functii.messageText("👍 Correct, patronu' !");
+            functii.messageText("👍 Corect' !");
             selectii.body.style.backgroundImage = "url('img/haurentiu2.png')";
             selectii.body.style.backgroundSize = 'cover';
             selectii.number.textContent = secretNumber;
@@ -45,14 +45,14 @@ let functii = {
             if (score > 1) {
                 functii.messageText(
                     guess > secretNumber
-                        ? `🤪 Prea mult, sefu' !`
-                        : `🤏Prea putin, nu fi zgarcit sefu' !`
+                        ? `🤪 Prea mult' !`
+                        : `🤏Prea putin, nu fi zgarcit' !`
                 );
                 score--;
                 selectii.score.textContent = score;
             } else {
                 functii.messageText(`😟 No, ai pierdut. 
-                Amu? Ce facem? Mai jucam?!`);
+                Acum? Ce facem? Mai jucam?!`);
                 selectii.score.textContent = 0;
             }
         }
